@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+p > span {
+  font-weight: 700;
+}
+h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+body {
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sign-up {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(234, 29%, 20%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 30px;
+}
+.text {
+  margin: 20px;
+  padding: 40px;
+}
+.text h1 {
+  padding-top: 50px;
+}
+.text > p {
+  padding-top: 20px;
+}
+.text ul {
+  padding-top: 20px;
+}
+.text ul li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.text ul li > p {
+  padding-left: 15px;
+}
+.image {
+  margin: 20px;
+}
+.image > img {
+  width: 100%;
+  object-fit: cover;
+}
+form {
+  margin-top: 25px;
+}
+form label {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: 1px solid hsl(231, 7%, 60%);
+  border-radius: 5px;
+}
+form input:focus {
+  outline: none;
+}
+button {
+  width: 100%;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background-color: hsl(4, 100%, 67%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Success message */
+
+.success {
+  width: 30%;
+  display: none;
+  background-color: white;
+  padding: 60px;
+  border-radius: 30px;
+}
+.success > svg {
+  margin-bottom: 20px;
+}
+.success > h1 {
+  padding-bottom: 20px;
+}
+.success > p {
+  padding-bottom: 20px;
+}
