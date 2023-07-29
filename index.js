@@ -1,5 +1,20 @@
 const successPage = document.querySelector(".success");
 const signUpPage = document.querySelector(".sign-up");
+const errorMessage = document.querySelector("form .error");
+const input = document.querySelector("form input");
+
+input.addEventListener("focusout", (e) => {
+  const isValid = e.target.checkValidity();
+  if (!isValid) {
+    input.style.backgroundColor = "pink";
+    input.style.color = "red";
+    input.style.border = "1px solid red";
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+    input.style.border = "1px solid green";
+  }
+});
 
 function onSubmit() {
   const form = document.querySelector(".text form");
@@ -21,7 +36,7 @@ function dismissMessage() {
   // ajout de l'evenement au clic
   dismissButton.addEventListener("click", () => {
     successPage.style.display = "none";
-    signUpPage.style.display = "grid";
+    signUpPage.style.display = "flex";
   });
 }
 dismissMessage();
